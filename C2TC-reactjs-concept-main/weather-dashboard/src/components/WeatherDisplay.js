@@ -8,7 +8,6 @@ function WeatherDisplay({ city }) {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        // Free API: https://api.open-meteo.com/
         const res = await fetch(
           `https://api.open-meteo.com/v1/forecast?latitude=51.5&longitude=-0.12&current_weather=true`
         );
@@ -22,17 +21,16 @@ function WeatherDisplay({ city }) {
   }, [city]);
 
   return (
-    <div>
-      <h2 style={{ color: theme === "light" ? "blue" : "orange" }}>
-        Weather in {city}
-      </h2>
+    <div className="weather-info">
+      <h2>☁️ Weather in {city}</h2>
       {weather ? (
-        <p>
-          🌡 Temperature: {weather.temperature}°C <br />
-          💨 Wind Speed: {weather.windspeed} km/h
-        </p>
+        <>
+          <p>🌡 Temperature: {weather.temperature}°C</p>
+          <p>💨 Wind Speed: {weather.windspeed} km/h</p>
+          <p>🕒 Last Updated: {new Date().toLocaleTimeString()}</p>
+        </>
       ) : (
-        <p>Loading weather...</p>
+        <p className="loading">Loading weather...</p>
       )}
     </div>
   );

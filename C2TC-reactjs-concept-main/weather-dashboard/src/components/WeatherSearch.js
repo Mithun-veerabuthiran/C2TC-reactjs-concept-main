@@ -3,7 +3,6 @@ import React, { useState, useCallback } from "react";
 function WeatherSearch({ onSearch }) {
   const [input, setInput] = useState("");
 
-  // useCallback to prevent re-creation
   const handleSearch = useCallback(
     (e) => {
       e.preventDefault();
@@ -16,10 +15,10 @@ function WeatherSearch({ onSearch }) {
   );
 
   return (
-    <form onSubmit={handleSearch} style={{ margin: "10px 0" }}>
+    <form className="search-form" onSubmit={handleSearch}>
       <input
         type="text"
-        placeholder="Enter city"
+        placeholder="Enter city name..."
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
