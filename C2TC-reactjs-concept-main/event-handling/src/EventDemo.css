@@ -1,0 +1,138 @@
+/* ========== Global Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== Page Background (Animated Gradient) ========== */
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #00c6ff, #0072ff);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animated gradient motion */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ========== Glassmorphic Container ========== */
+.glass-container {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 40px 50px;
+  width: 420px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.glass-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* ========== Heading ========== */
+.glass-container h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transition: color 0.4s ease-in-out;
+}
+
+/* ========== Buttons ========== */
+button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 12px 20px;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px 5px;
+  width: 80%;
+  max-width: 260px;
+  backdrop-filter: blur(8px);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.25);
+}
+
+/* ========== Input Field ========== */
+input[type="text"] {
+  width: 90%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 20px;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+input[type="text"]:focus {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* ========== Paragraph ========== */
+p {
+  margin-top: 15px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: #e0e0e0;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== Footer Note ========== */
+.footer-note {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  opacity: 0.85;
+  letter-spacing: 0.4px;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 500px) {
+  .glass-container {
+    width: 90%;
+    padding: 25px 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

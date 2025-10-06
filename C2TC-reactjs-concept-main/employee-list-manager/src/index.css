@@ -1,0 +1,102 @@
+/* ========== Global Reset & Typography ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f5f6fa;
+  color: #2f3640;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 40px;
+}
+
+/* ========== Container ========== */
+.employee-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.employee-container:hover {
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== Heading ========== */
+.employee-container h2 {
+  text-align: center;
+  color: #273c75;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #40739e;
+  padding-bottom: 10px;
+}
+
+/* ========== Employee List ========== */
+.employee-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.employee-list li {
+  background: #dcdde1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.employee-list li:hover {
+  background: #f1f2f6;
+}
+
+/* ========== Buttons ========== */
+button {
+  cursor: pointer;
+  background-color: #40739e;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+button:hover {
+  background-color: #273c75;
+}
+
+button.remove-btn {
+  background-color: #e84118;
+}
+
+button.remove-btn:hover {
+  background-color: #c23616;
+}
+
+/* ========== Input ========== */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #dcdde1;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #40739e;
+  outline: none;
+}
